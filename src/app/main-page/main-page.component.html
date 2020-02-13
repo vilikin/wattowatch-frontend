@@ -1,0 +1,22 @@
+<div>
+    <div class="mt-5">
+        <div class="flex justify-between items-center">
+            <h2 class="font-main text-red-700 text-xl">Live streams</h2>
+            <button routerLink="/subscribe" class="uppercase bg-white border border-solid border-red-700 text-red-700 px-2 py-1 rounded font-bold text-sm cursor-pointer hover:text-white hover:bg-red-700 focus:outline-none focus:shadow-outline">New Subscription</button>
+        </div>
+        <div class="flex overflow-x-scroll pb-3 mt-4">
+            <app-live-stream *ngFor="let liveStream of (liveStreams$ | async)"
+                             [liveStream]="liveStream"></app-live-stream>
+        </div>
+    </div>
+    <div class="mt-5">
+        <div class="flex justify-between items-center">
+            <h2 class="font-main text-red-700 text-xl">Latest videos</h2>
+            <button routerLink="/subscribe" class="uppercase bg-white border border-solid border-red-700 text-red-700 px-2 py-1 rounded font-bold text-sm cursor-pointer hover:text-white hover:bg-red-700 focus:outline-none focus:shadow-outline">New Subscription</button>
+        </div>
+        <div class="flex overflow-x-scroll pb-3 mt-4">
+            <app-video *ngFor="let video of (videos$ | async)" [video]="video"></app-video>
+        </div>
+    </div>
+</div>
+

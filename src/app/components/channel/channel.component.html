@@ -1,0 +1,10 @@
+<div class="w-56 border border-gray-200 shadow rounded overflow-hidden mr-2">
+    <img [src]="channel.imageUrl" [alt]="channel.name" class="w-full h-40 object-cover object-center"/>
+    <div class="p-2">
+        <div class="text-xs font-semibold text-gray-700">
+            {{channel.sourceSystem}}
+        </div>
+        <div class="truncate text-gray-900">{{channel.name}}</div>
+        <button (click)="unsubscribe.emit()" class="text-xs tracking-wide font-bold uppercase text-red-800 cursor-pointer">Unsubscribe</button>
+    </div>
+</div>
